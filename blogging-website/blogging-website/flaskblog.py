@@ -18,13 +18,12 @@ posts = [
 
 @app.route("/")
 def hello():
-    return render_template('Home page.html')
-    return "<h1>Home Page!!</h1>"
+    return render_template('Home page.html', posts = posts)
 
 @app.route("/About")
 def about():
     return "<h1> About page </h1>"
 
 
-#if __name__ == '__main__':
-#    app.run(debug = True)
+if __name__ == '__main__':
+    app.run(debug = True)
